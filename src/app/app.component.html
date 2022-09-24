@@ -1,0 +1,32 @@
+<hello name="{{ name }}"></hello>
+
+<input type="radio" [(ngModel)]="option" [value]="1"/>Juros Simples
+<input type="radio" [(ngModel)]="option" [value]="2"/>Juros Compostos
+<input type="radio" [(ngModel)]="option" [value]="3"/>Armotização
+<input type="radio" [(ngModel)]="option" [value]="4"/>Tabela Price
+<input type="radio" [(ngModel)]="option" [value]="5"/>Todos
+
+<ng-container *ngIf="option == 1">
+<app-karen-simple-interests-component></app-karen-simple-interests-component>
+</ng-container>
+
+<ng-container *ngIf="option == 2">
+<app-karen-compound-interests-component></app-karen-compound-interests-component>
+</ng-container>
+
+<ng-container *ngIf="option == 3">
+<app-karen-amortizacao></app-karen-amortizacao>
+</ng-container>
+
+<ng-container *ngIf="option == 4">
+<app-karen-price></app-karen-price>
+</ng-container>
+
+<ng-container *ngIf="option == 5">
+<app-karen-simple-interests-component></app-karen-simple-interests-component>
+<app-karen-compound-interests-component></app-karen-compound-interests-component>
+<app-karen-amortizacao></app-karen-amortizacao>
+<app-karen-price></app-karen-price>
+</ng-container>
+
+
